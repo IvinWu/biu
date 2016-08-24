@@ -1,0 +1,12 @@
+{
+  //ftp信息
+  "ftp": {
+    "host": "xx.xx.xx.xx",
+    "user": "user",
+    "pass": "pass",
+    //ftp默认传送的的路径
+    "dest": "/"
+  },
+  //是否使用webpack
+  "webpack": true
+}

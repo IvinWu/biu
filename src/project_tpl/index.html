@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="no"/>
+    <meta name="format-detection" content="telephone=no">
+    <!--使用绝对路径的意思是，资源在编译时候将会被替换成CDN的路径。如果用相对路径，则不会被替换-->
+    <link rel="stylesheet" href="/css/index.css" />
+</head>
+
+<body>
+
+<!--html之间的引入示例如下，建议将所有的html组件都放在template文件夹内，并按.handlebars为后缀，这样JS也能对其进行引用-->
+@@include('template/components.handlebars')
+
+<!--如果存在多个入口JS文件，则需要加上common.js的引用-->
+<!--<script src="/js/common/common.js"></script>-->
+
+<!--页面的入口JS文件-->
+<script src="/js/index.js"></script>
+
+</body>
+</html>

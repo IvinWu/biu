@@ -1,0 +1,46 @@
+/* 零、以下是一些CSS方面的示例和技巧，在仔细阅读后，请清空本文件 */
+
+
+
+/* 一、支持less语法，详情请浏览 http://less.bootcss.com/ */
+
+
+
+/* 二、支持字体压缩 */
+@font-face {
+	font-family: 'pinghei';
+	/* 字体文件统一放在项目文件夹内的 font 文件夹*/
+	src: url('../font/pinghei.eot');
+	src:
+		url('../font/pinghei.eot?#font-spider') format('embedded-opentype'),
+		url('../font/pinghei.woff') format('woff'),
+		url('../font/pinghei.ttf') format('truetype'),
+		url('../font/pinghei.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/* 使用选择器指定字体 */
+body {
+	font-family: 'pinghei';
+}
+/* 注意：压缩工具只会把html中用到的字体纳入到字体文件中 */
+
+
+
+/* 三、项目文件夹内的 img/__ignore/ 内的图片将不会被发布，所以可以用来存储用于base64的图片资源，并借助less的data-uri方法进行转换 */
+.ignore {
+	background-image: data-uri('../img/__ignore/base64.png');
+}
+
+
+
+/* 四、支持自动合并雪碧图 */
+/* 项目文件夹内的 img/sprite/ 内的图片将会自动合成雪碧图，其中jpg文件合成一张，png文件合成一张 */
+.logo1 {
+	background-image: url('../img/sprite/logo1.png');
+}
+.logo2 {
+	background-image: url('../img/sprite/logo2.png');
+}
+
+
